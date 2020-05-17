@@ -1,0 +1,130 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1f;
+  animation: fade-anim 1s ease forwards 3s;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: fixed;
+}
+
+.svg {
+  width: 320px;
+  max-width: 90%;
+  stroke: #fff;
+  fill: transparent;
+  animation: fill-anim 1s ease forwards 2.5s;
+}
+
+.letterOpenBracket {
+  opacity: 0;
+  stroke-dashoffset: -67px;
+  stroke-dasharray: 67px;
+  animation: open-bracket-anim 1s ease forwards 1.8s;
+}
+
+.letterA1 {
+  stroke-dashoffset: -102px;
+  stroke-dasharray: 102px;
+  animation: line-anim 2s ease forwards;
+}
+
+.letterM {
+  stroke-dashoffset: -140.1px;
+  stroke-dasharray: 140.1px;
+  animation: line-anim 2s ease forwards 0.2s;
+}
+
+.letterA2 {
+  stroke-dashoffset: -102px;
+  stroke-dasharray: 102px;
+  animation: line-anim 2s ease forwards 0.4s;
+}
+
+.letterN1 {
+  stroke-dashoffset: -126px;
+  stroke-dasharray: 126px;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+
+.letterD {
+  stroke-dashoffset: -119px;
+  stroke-dasharray: 119px;
+  animation: line-anim 2s ease forwards 0.8s;
+}
+
+.letterA3 {
+  stroke-dashoffset: -102px;
+  stroke-dasharray: 102px;
+  animation: line-anim 2s ease forwards 1s;
+}
+
+.letterN2 {
+  stroke-dashoffset: -126px;
+  stroke-dasharray: 126px;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+
+.letterG {
+  stroke-dashoffset: -127px;
+  stroke-dasharray: 127px;
+  animation: line-anim 2s ease forwards 1.4s;
+}
+
+.letterSlash {
+  opacity: 0;
+  stroke-dashoffset: -59px;
+  stroke-dasharray: 59px;
+  animation: close-bracket-anim 1s ease forwards 1.8s;
+}
+
+.letterCloseBracket {
+  opacity: 0;
+  stroke-dashoffset: -67px;
+  stroke-dasharray: 67px;
+  animation: close-bracket-anim 1s ease forwards 1.8s;
+}
+
+@keyframes fill-anim {
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes open-bracket-anim {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    transform: translateX(0);
+  }
+}
+
+@keyframes close-bracket-anim {
+  from {
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-anim {
+  to {
+    opacity: 0;
+  }
+}
